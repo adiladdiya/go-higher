@@ -4,18 +4,58 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #ffffff;
+
+  --yellow: #FDECCD;
+  --yellow-green: #B5E9D3;
+  --green: #17DCC4;
+  --light-green: #41DFCC;
+  --orange: #FEDACB;
+
+  --grey: #3D4249;
+  --dark-blue: #293E53;
+  --dark-blue-50: rgba(41, 62, 83, 0.5);
+  
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+
+/* *{
+  outline: 1px solid red;
+} */
+body {
+ 
+  background: var(--background);
+  font-family: "Mulish", Arial, Helvetica, sans-serif;
 }
 
-body {
+.splash-screen {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--green);
+  background: linear-gradient(-45deg, var(--yellow) 0%, var(--yellow-green) 15%, var(--green) 50%, var(--light-green) 75%, var(--orange) 100%);
+}
+
+.main{
+  background-repeat: no-repeat;
+  background-position: top right;
+
+ 
+  header{
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% auto;
+    height: 300px;
+    h1{
+      text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25) ;
+    }
+  }
+  main{
+    box-shadow: 0 -15px 20px rgba(0, 0, 0, 0.25);
+    color: var(--grey);
+  }
 }
