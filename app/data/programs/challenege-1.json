@@ -1,0 +1,59 @@
+{
+    "title": "marathon program by run elite",
+    "id": "aksdjjnansd",
+    "goal": "running your next marathon in less than 4 hours",
+    "coach": {
+        "name": "david snow.",
+        "bio": "",
+        "social": []
+    },
+    "price": "100$",
+    "parts": {
+        "warm-up": {
+            "steps": [
+                {
+                    "index": "1",
+                    "date": "2025-01-28",
+                    "activities": [
+                        {
+                            "type": "stretch",
+                            "unit": "repetition",
+                            "quantity": "10",
+                            "details": {
+                                "title": "easy run for 30 min",
+                                "description": "null"
+                            }
+                        },
+                        {
+                            "type": "run",
+                            "unit": "duration",
+                            "quantity": "30 min",
+                            "details": {
+                                "title": "easy run for 30 min",
+                                "description": "null"
+                            }
+                        },
+                        {
+                            "type": "run",
+                            "unit": "stride",
+                            "quantity": "10",
+                            "details": {
+                                "title": "easy run for 30 min",
+                                "description": "null"
+                            }
+                        },
+                        {
+                            "type": "cold down",
+                            "unit": "distance",
+                            "quantity": "1 km",
+                            "details": {
+                                "title": "easy run for 30 min",
+                                "description": "null"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -14,7 +14,7 @@ export default function Welcome() {
   }
 
   const start = () => {
-    router.push(`/challenge-settings?challenge=${challenge}` )
+    router.push(`/challenge/settings?challenge=${challenge}` )
   }
 
   return (

@@ -1,0 +1,54 @@
+{
+    "post-run-stretch-cooldown-routine-1": {
+        "id": "post-run-stretch-cooldown-routine-1",
+        "title": "Post Run Stretch & Cooldown Routine",
+        "details": "https://www.youtube.com/watch?v=fkgmhXiaS-Y",
+        "workouts": [
+            {
+                "title": "Calf stretch",
+                "reps": null,
+                "duration": 90
+            },
+            {
+                "title": "Inverted calf stretch",
+                "reps": null,
+                "duration": 90
+            },
+            {
+                "title": "Single leg hamstring",
+                "reps": null,
+                "duration": 60
+            },
+            {
+                "title": "Leg sings - side to side",
+                "reps": 20,
+                "duration": null
+            },
+            {
+                "title": "Leg sings - Forward/Reverse",
+                "reps": 20,
+                "duration": null
+            },
+            {
+                "title": "Quad pull",
+                "reps": null,
+                "duration": 30
+            },
+            {
+                "title": "Knee hug",
+                "reps": null,
+                "duration": 30
+            },
+            {
+                "title": "Pigon stretch",
+                "reps": null,
+                "duration": 30
+            },
+            {
+                "title": "Hamstring sweeps",
+                "reps": null,
+                "duration": null
+            }
+        ]
+    }
+}

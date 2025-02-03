@@ -15,7 +15,7 @@
   --grey: #3D4249;
   --dark-blue: #293E53;
   --dark-blue-50: rgba(41, 62, 83, 0.5);
-  
+
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -29,7 +29,7 @@
   outline: 1px solid red;
 } */
 body {
- 
+
   background: var(--background);
   font-family: "Mulish", Arial, Helvetica, sans-serif;
 }
@@ -40,22 +40,180 @@ body {
   background: linear-gradient(-45deg, var(--yellow) 0%, var(--yellow-green) 15%, var(--green) 50%, var(--light-green) 75%, var(--orange) 100%);
 }
 
-.main{
+.main {
   background-repeat: no-repeat;
   background-position: top right;
 
- 
-  header{
+
+  header {
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 100% auto;
     height: 300px;
-    h1{
-      text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25) ;
+
+    h1 {
+      text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
     }
   }
-  main{
+
+  main {
     box-shadow: 0 -15px 20px rgba(0, 0, 0, 0.25);
     color: var(--grey);
+  }
+}
+
+.challenge {
+  min-height: 222px;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+
+  h2 {
+    font-size: 1.5rem;
+    max-width: 60%;
+    font-weight: 700;
+  }
+
+  .status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #17DCC4;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+    color: var(--foreground);
+    height: 34px;
+  }
+
+  .next-activity {
+    font-size: 0.8rem;
+    height: 40px;
+    overflow: hidden;
+
+    ol {
+      list-style: number;
+      padding-left: 15px;
+
+      li {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.activities {
+  ul {
+    li {
+      padding: 10px;
+      border-radius: 40px;
+      height: 80px;
+      border: 1px solid var(--green);
+      margin-bottom: 10px;
+      display: flex;
+    
+      &.activity{
+        &.done{
+          opacity: 0.2;
+          overflow: hidden;
+          pointer-events: none;
+          height: 0;
+          padding: 0;
+          overflow: hidden;
+          border: 0;
+        }
+        &.in-progress{
+          background-color: #fedacb42;
+          border: 1px solid var(--dark-blue);
+          height: 200px;
+          border-radius: 20px;
+        }
+      }
+      .icon {
+        height: 60px;
+        width: 60px;
+        background-color: #17DCC4;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--foreground);
+        position: relative;
+        .progress{
+          position: absolute;
+          font-size: 1rem;
+          font-weight: 400;
+        }
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        width: 220px;
+      }
+
+      .status {
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: #17DCC4;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+        color: var(--foreground);
+        height: 34px;
+      }
+    }
+  }
+}
+
+/* circular-progress */
+
+.circular-progress {
+  --size: 250px;
+  --half-size: calc(var(--size) / 2);
+  --stroke-width: 20px;
+  --radius: calc((var(--size) - var(--stroke-width)) / 2);
+  --circumference: calc(var(--radius) * pi * 2);
+  --dash: calc((var(--progress) * var(--circumference)) / 100);
+  animation: progress-animation 5s linear 0s 1 forwards;
+}
+
+.circular-progress circle {
+  cx: var(--half-size);
+  cy: var(--half-size);
+  r: var(--radius);
+  stroke-width: var(--stroke-width);
+  fill: none;
+  stroke-linecap: round;
+}
+
+.circular-progress circle.bg {
+  stroke: #ddd;
+}
+
+.circular-progress circle.fg {
+  transform: rotate(-90deg);
+  transform-origin: var(--half-size) var(--half-size);
+  stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+  transition: stroke-dasharray 0.3s linear 0s;
+  stroke: #5394fd;
+}
+
+@property --progress {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@keyframes progress-animation {
+  from {
+    --progress: 0;
+  }
+
+  to {
+    --progress: 100;
   }
 }

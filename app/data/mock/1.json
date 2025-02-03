@@ -1,0 +1,62 @@
+{
+    "asd1": {
+        "id": "asd1",
+        "title": "Run Longueuil Marathon",
+        "goal": "",
+        "status": "On-Track",
+        "start_date": "2018-09-01",
+        "end_date": "2018-09-30",
+        "activities": [
+            {
+                "id": 0,
+                "title": "Warm-up 10min ",
+                "type": "Run",
+                "unit": "km",
+                "quantity": 10,
+                "progress": 2,
+                "status": "done",
+                "details": {
+                    "distance": 10
+                }
+            },
+            {
+                "id": 1,
+                "title": "Easy to steady run 30min",
+                "type": "Run",
+                "unit": "minutes",
+                "quantity": 30,
+                "progress": 2,
+                "status": "in-progress",
+                "details": {
+                    "time": 10
+                }
+            },            
+            {
+                "id": 1,
+                "title": "Easy to steady run 10km",
+                "type": "Run",
+                "unit": "km",
+                "quantity": 10,
+                "progress": 2,
+                "status": "to-do",
+                "details": {
+                    "distance": 10
+                }
+            },
+            {
+                "id": 2,
+                "title": "Run 8 x 100m strides",
+                "type": "Run",
+                "unit": "stride",
+                "quantity": 10,
+                "progress": 4,
+                "status": "to-do",
+                "details": {
+                    "reps": 8,
+                    "distance": 100,
+                    "recovery": 100
+                }
+            }
+        ]
+    }
+}

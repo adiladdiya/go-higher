@@ -6,15 +6,23 @@ import { onAuthStateChanged } from 'firebase/auth'
 import { useEffect } from 'react'
 import { redirect } from 'next/navigation'
 
+import { selectUserProfile, updateProfile } from "@/lib/features/userData/userDataSlice";
+import { useAppSelector, useAppDispatch } from "@/lib/hooks";
+import { useState } from "react";
 
 export default function Splash() {
+
+  const dispatch = useAppDispatch();
+  const userProfile = useAppSelector(selectUserProfile);
+
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         const uid = user.uid;
-        console.log(user)
+        dispatch(updateProfile({ ...userProfile, uid: uid }))
+        redirect('/challenges')
       } else {
-        redirect('/challenge-new')
+        redirect('/challenges/new')
       }
     });
   }, [])

@@ -1,0 +1,84 @@
+{
+    "warmup-routine-1": {
+        "id": "warmup-routine-1",
+        "title": "Warmup Routine Before I Run",
+        "details": "https://www.youtube.com/shorts/PLMD-mm4U_0",
+        "workouts": [
+            {
+                "title": "Toe walks Forward",
+                "reps": null,
+                "duration": null
+            },
+            {
+                "title": "Heel walk Forward",
+                "reps": null,
+                "duration": null
+            },
+            {
+                "title": "Toe walks reverse",
+                "reps": null,
+                "duration": null
+            },
+            {
+                "title": "Heel walk reverse",
+                "reps": null,
+                "duration": null
+            },
+            {
+                "title": "Knee hugs",
+                "reps": null,
+                "duration": 30
+            },
+            {
+                "title": "Quad stretch",
+                "reps": null,
+                "duration": 30
+            },
+            {
+                "title": "Lateral lunge",
+                "reps": 20,
+                "duration": null
+            },
+            {
+                "title": "Forward lunge hold",
+                "reps": 20,
+                "duration": null
+            },
+            {
+                "title": "World greatest stretch",
+                "reps": null,
+                "duration": 30
+            },
+            {
+                "title": "hamstring sweeps",
+                "reps": 20,
+                "duration": null
+            },
+            {
+                "title": "Figure 4",
+                "reps": null,
+                "duration": 30
+            },
+            {
+                "title": "shuffle with Arm rotation",
+                "reps": null,
+                "duration": null
+            },
+            {
+                "title": "Carioca",
+                "reps": null,
+                "duration": null
+            },
+            {
+                "title": "leg swings Forward/back",
+                "reps": 20,
+                "duration": null
+            },
+            {
+                "title": "leg swings side to side",
+                "reps": 20,
+                "duration": null
+            }
+        ]
+    }
+}

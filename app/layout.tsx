@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Mulish } from "next/font/google";
 import "./globals.css";
+import { StoreProvider } from "./StoreProvider";
 
 const mulish = Mulish({
   variable: "--font-geist-sans",
@@ -19,6 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <StoreProvider>
     <html lang="en">
       <body
         className={`${mulish.variable} antialiased`}
@@ -26,5 +28,6 @@ export default function RootLayout({
         {children}
       </body>
     </html>
+    </StoreProvider>
   );
 }
